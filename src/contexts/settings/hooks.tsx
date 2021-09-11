@@ -8,6 +8,7 @@ import {
   darkTemplate,
   deuteranopiaTemplate,
   tritanopiaTemplate,
+  junoTemplate,
 } from '@styles';
 import { usePersistedState } from '@hooks';
 import {
@@ -29,6 +30,7 @@ export const useTheme = (initialState:ThemeState) => {
     'dark',
     'deuteranopia',
     'tritanopia',
+    'juno',
   ];
 
   const themeDictionary = {
@@ -36,6 +38,7 @@ export const useTheme = (initialState:ThemeState) => {
     dark: darkTemplate,
     deuteranopia: deuteranopiaTemplate,
     tritanopia: tritanopiaTemplate,
+    juno: junoTemplate,
   };
 
   useEffect(() => {
