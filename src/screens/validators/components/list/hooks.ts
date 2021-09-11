@@ -24,9 +24,9 @@ export const useValidators = () => {
     exists: true,
     items: [],
     votingPowerOverall: 0,
-    tab: 0,
-    sortKey: 'validator.name',
-    sortDirection: 'asc',
+    tab: 1,
+    sortKey: 'votingPower',
+    sortDirection: 'desc',
   });
 
   const handleSetState = (stateChange: any) => {
