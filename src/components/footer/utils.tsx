@@ -1,6 +1,10 @@
 const FORBOLE_URL = 'https://www.forbole.com';
 const BIG_DIPPER_URL = 'https://bigdipper.live';
 
+const GITHUB_URL = 'https://github.com/cosmoscontracts';
+const JUNO_DOCS = 'https://docs.junochain.com/';
+const JUNO_DISCORD = 'https://discord.gg/QcWPfK4gJ2';
+
 export const donateLink = {
   key: 'donate',
   url: `${BIG_DIPPER_URL}/donate`,
@@ -8,28 +12,7 @@ export const donateLink = {
 
 export const footerLinks = [
   {
-    key: 'company',
-    links: [
-      {
-        key: 'forbole',
-        url: FORBOLE_URL,
-      },
-      {
-        key: 'stakeNow',
-        url: `${FORBOLE_URL}/stake-now`,
-      },
-      {
-        key: 'contact',
-        url: `${FORBOLE_URL}/contact`,
-      },
-      {
-        key: 'blog',
-        url: `${FORBOLE_URL}/blog`,
-      },
-    ],
-  },
-  {
-    key: 'bigDipper',
+    key: 'junoscan',
     links: [
       {
         key: 'about',
@@ -46,6 +29,23 @@ export const footerLinks = [
       {
         key: 'privacyPolicy',
         url: `${BIG_DIPPER_URL}/privacy-policy`,
+      },
+    ],
+  },
+  {
+    key: 'juno',
+    links: [
+      {
+        key: 'github',
+        url: GITHUB_URL,
+      },
+      {
+        key: 'docs',
+        url: JUNO_DOCS,
+      },
+      {
+        key: 'supportOnDiscord',
+        url: JUNO_DISCORD,
       },
     ],
   },

@@ -81,13 +81,13 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Button
+                {/* <Button
                   className="footer__donate-button"
                   variant="contained"
                   color="primary"
                 >
                   {t('common:donate')}
-                </Button>
+                </Button> */}
               </a>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
           {' '}
           {year}
         </Typography>
-        <Typography className="footer__closing--text">
+        {/* <Typography className="footer__closing--text">
           <Trans
             i18nKey="common:maintainBy"
             components={[
@@ -113,7 +113,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
               name: generalConfig.maintainer.name,
             }}
           />
-        </Typography>
+        </Typography> */}
       </div>
     </div>
   );
