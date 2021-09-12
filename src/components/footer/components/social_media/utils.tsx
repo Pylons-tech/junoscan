@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   TelegramIcon,
-  LinkedinIcon,
   TwitterIcon,
   GithubIcon,
 } from '@icons';
