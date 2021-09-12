@@ -1,4 +1,3 @@
-const FORBOLE_URL = 'https://www.forbole.com';
 const BIG_DIPPER_URL = 'https://bigdipper.live';
 
 const GITHUB_URL = 'https://github.com/cosmoscontracts';
