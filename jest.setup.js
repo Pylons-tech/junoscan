@@ -65,11 +65,11 @@ jest.mock('@configs', () => ({
   },
   generalConfig: {
     "maintainer": {
-      "name": "Forbole",
-      "url": "https://forbole.com"
+      "name": "SG-1",
+      "url": "https://sg-1.online"
     },
     "github": {
-      "reportIssue": "https://github.com/forbole/big-dipper-2.0-cosmos/issues"
+      "reportIssue": "https://github.com/CosmosContracts/junoscan/issues"
     }
   }
 }));

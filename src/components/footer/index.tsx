@@ -3,12 +3,13 @@ import classnames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 import FooterLogoLight from '@assets/big-dipper-red.svg';
 import FooterLogoDark from '@assets/big-dipper-white.svg';
+import Trans from 'next-translate/Trans';
 import {
   Divider,
   Typography,
 } from '@material-ui/core';
 import {
-  chainConfig,
+  chainConfig, generalConfig
 } from '@src/configs';
 import { useSettingsContext } from '@contexts';
 import { SocialMedia } from './components';
@@ -98,7 +99,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
           {' '}
           {year}
         </Typography>
-        {/* <Typography className="footer__closing--text">
+        <Typography className="footer__closing--text">
           <Trans
             i18nKey="common:maintainBy"
             components={[
@@ -111,7 +112,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
               name: generalConfig.maintainer.name,
             }}
           />
-        </Typography> */}
+        </Typography>
       </div>
     </div>
   );
