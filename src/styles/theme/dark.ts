@@ -18,7 +18,7 @@ export const darkThemeOverride = {
   palette: {
     type: 'dark',
     primary: {
-      main: '#FF835B',
+      main: '#F0827D',
       contrastText: '#fff',
     },
     background: {
@@ -44,10 +44,10 @@ export const darkThemeOverride = {
         highlight: '#4092CD', // links
       },
       primaryData: {
-        one: '#F87255',
-        two: '#FA9147',
-        three: '#43BE7C',
-        four: '#43A1BE',
+        one: '#F0827D',
+        two: '#9AA2A8',
+        three: '#F0827D',
+        four: '#9AA2A8',
       },
       results: {
         pass: '#1EC490',
@@ -65,12 +65,12 @@ export const darkThemeOverride = {
         three: '#20D292',
       },
       charts: {
-        zero: '#E6E6E6',
-        one: '#F87255',
-        two: '#FA9147',
-        three: '#43BE7C',
-        four: '#43A1BE',
-        five: '#C25396',
+        zero: '#FA5D55',
+        one: '#F76F68',
+        two: '#F0827D',
+        three: '#A17370',
+        four: '#FC382D',
+        five: '#FF241C',
       },
     },
   },
