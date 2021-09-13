@@ -45,9 +45,9 @@ export const junoThemeOverride = {
       },
       primaryData: {
         one: '#F87255',
-        two: '#FA9147',
-        three: '#20D494',
-        four: '#2FB6E0',
+        two: '#F87255',
+        three: '#F87255',
+        four: '#F87255',
       },
       results: {
         pass: '#1EC490',

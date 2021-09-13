@@ -65,7 +65,7 @@ const Desktop: React.FC<{
             }),
           }}
         >
-          {theme === 'light' ? (
+          {(theme === 'light' || theme === 'juno') ? (
             <BigDipperLogoRed
               className={classes.logo}
               onClick={toggleMenu}
