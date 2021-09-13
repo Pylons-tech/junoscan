@@ -12,7 +12,7 @@ const TitleBar:React.FC<{
   className?: string;
   title: string;
 }> = ({
-  className, title,
+  className,
 }) => {
   const { t } = useTranslation('common');
   const classes = useStyles();
@@ -20,12 +20,9 @@ const TitleBar:React.FC<{
 
   const market = formatMarket(marketContext);
 
-
   return (
     <div className={classnames(className, classes.root)}>
-      {
-      <Typography variant="h1">{"Explore Juno"}</Typography>
-      }
+      <Typography variant="h1">{'Explore Juno'}</Typography>
       <div className={classes.content}>
         {market.map((x) => (
           <div key={x.key} className={classes.item}>
