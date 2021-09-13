@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import {
-  chainConfig, generalConfig
+  chainConfig, generalConfig,
 } from '@src/configs';
 import { useSettingsContext } from '@contexts';
 import { SocialMedia } from './components';
