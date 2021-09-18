@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-import { ExpandMore } from '@material-ui/icons';
 import { Typography } from '@material-ui/core';
 import { useNetworksContext } from '@src/contexts';
 import { chainConfig } from '@configs';
@@ -10,7 +9,7 @@ const Network:React.FC<{
   className?: string;
   toggleNetwork: () => void;
 }> = ({
-  className, toggleNetwork,
+  className,
 }) => {
   const classes = useStyles();
   const {
@@ -18,15 +17,12 @@ const Network:React.FC<{
   } = useNetworksContext();
   return (
     <div
-      className={classnames(className, classes.root)}
-      onClick={toggleNetwork}
-      role="button"
+    className={classnames(className, classes.root)}
     >
       <img src={chainConfig.icon} className={classes.icon} alt="icon" />
       <Typography variant="body1">
         {selected}
       </Typography>
-      <ExpandMore />
     </div>
   );
 };

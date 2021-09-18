@@ -12,9 +12,6 @@ export const useStyles = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          '&:hover': {
-            cursor: 'pointer',
-          },
           '& .MuiSvgIcon-root': {
             marginLeft: '0.1rem',
           },
