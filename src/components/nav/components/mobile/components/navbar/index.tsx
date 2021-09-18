@@ -25,11 +25,7 @@ const Navbar = (props:NavbarProps) => {
     <div className={classes.root}>
       <Link href={HOME}>
         <a className={classes.a}>
-          {theme === 'light' || theme === 'juno' || theme === 'dark' ? (
-            <BigDipperLogoRed className={classes.logo} />
-          ) : (
-            <BigDipperLogoWhite className={classes.logo} />
-          )}
+        <BigDipperLogoRed className={classes.logo} />
         </a>
       </Link>
       <div className={classes.actions}>

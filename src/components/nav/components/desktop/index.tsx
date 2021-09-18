@@ -65,19 +65,11 @@ const Desktop: React.FC<{
             }),
           }}
         >
-          {(theme === 'light' || theme === 'juno' || theme === 'dark') ? (
-            <BigDipperLogoRed
+          <BigDipperLogoRed
               className={classes.logo}
               onClick={toggleMenu}
               role="button"
-            />
-          ) : (
-            <BigDipperLogoWhite
-              className={classes.logo}
-              onClick={toggleMenu}
-              role="button"
-            />
-          )}
+          />
           <MenuItems />
         </Drawer>
       </div>
