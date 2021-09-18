@@ -18,7 +18,7 @@ const InitialLoad = () => {
       <div>
         {/* <img src={logoUrl} className={classes.logo} alt="logo" /> */}
         <LinearProgress className={classes.divider} />
-        {theme === 'light' ? (
+        {theme === 'light' || theme === 'juno' || theme === 'dark' ? (
           <BigDipperLogoRed />
         ) : (
           <BigDipperLogoWhite />

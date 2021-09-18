@@ -26,11 +26,11 @@ export const useTheme = (initialState:ThemeState) => {
   const [themeSelection, setThemeSelection] = usePersistedState('themeSelection', initialState.themeSelection);
 
   const themeList = [
-    'light',
+    // 'light',
     'dark',
-    'deuteranopia',
-    'tritanopia',
-    'juno',
+    // 'deuteranopia',
+    // 'tritanopia',
+    // 'juno',
   ];
 
   const themeDictionary = {
@@ -53,7 +53,7 @@ export const useTheme = (initialState:ThemeState) => {
     } else if (themeDictionary[themeSelection]) {
       setTheme(themeSelection as Theme);
     } else {
-      setTheme('light');
+      setTheme('dark');
     }
   }, [themeSelection]);
 
@@ -65,7 +65,7 @@ export const useTheme = (initialState:ThemeState) => {
 
   return {
     theme,
-    muiTheme: createMuiTheme(themeDictionary[theme] || lightTemplate),
+    muiTheme: createMuiTheme(themeDictionary[theme] || darkTemplate),
     themeSelection,
     themeList,
     themeDictionary,

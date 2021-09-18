@@ -1,4 +1,6 @@
-export type Theme = 'light' | 'dark' | 'device' | 'deuteranopia' | 'tritanopia' | 'achromatopsia' | 'juno';
+// export type Theme = 'light' | 'dark' | 'device' | 'deuteranopia' | 'tritanopia' | 'achromatopsia' | 'juno';
+
+export type Theme = 'dark';
 
 export interface ThemeState {
   theme: Theme;

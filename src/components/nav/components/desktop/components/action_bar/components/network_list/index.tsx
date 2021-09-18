@@ -26,7 +26,7 @@ const NetworkList: React.FC<{
           height: actionHeight,
         }}
       >
-        {theme === 'light' ? (
+        {theme === 'light' || theme === 'juno' || theme === 'dark' ? (
           <BigDipperLogoRed />
         ) : (
           <BigDipperLogoWhite />

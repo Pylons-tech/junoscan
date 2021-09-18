@@ -1,6 +1,6 @@
 import React from 'react';
 import { createMuiTheme } from '@material-ui/core/styles';
-import { junoTemplate } from '@styles';
+import { darkTemplate } from '@styles';
 import {
   useTheme, useDateFormat,
 } from './hooks';
@@ -11,9 +11,9 @@ import {
 } from './types';
 
 const initialThemeState: ThemeState = {
-  theme: 'juno',
+  theme: 'dark',
   themeSelection: 'device',
-  muiTheme: createMuiTheme(junoTemplate),
+  muiTheme: createMuiTheme(darkTemplate),
   themeList: [],
 };
 
