@@ -5,7 +5,7 @@ import { ExpandMore } from '@material-ui/icons';
 import {
   useSettingsContext, useNetworksContext,
 } from '@contexts';
-import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
+// import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
 import BigDipperLogoRed from '@assets/big-dipper-red.svg';
 import { HOME } from '@utils/go_to_page';
 import { useStyles } from './styles';
@@ -13,7 +13,7 @@ import { NavbarProps } from './types';
 
 const Navbar = (props:NavbarProps) => {
   const classes = useStyles();
-  const { theme } = useSettingsContext();
+  // const { theme } = useSettingsContext();
   const { selected } = useNetworksContext();
   const {
     isOpen,
@@ -25,7 +25,7 @@ const Navbar = (props:NavbarProps) => {
     <div className={classes.root}>
       <Link href={HOME}>
         <a className={classes.a}>
-        <BigDipperLogoRed className={classes.logo} />
+          <BigDipperLogoRed className={classes.logo} />
         </a>
       </Link>
       <div className={classes.actions}>

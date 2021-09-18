@@ -22,7 +22,7 @@ const TitleBar:React.FC<{
 
   return (
     <div className={classnames(className, classes.root)}>
-      <Typography variant="h1">{"Junø Network"}</Typography>
+      <Typography variant="h1">Junø Network</Typography>
       <div className={classes.content}>
         {market.map((x) => (
           <div key={x.key} className={classes.item}>

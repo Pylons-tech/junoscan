@@ -17,7 +17,7 @@ const Network:React.FC<{
   } = useNetworksContext();
   return (
     <div
-    className={classnames(className, classes.root)}
+      className={classnames(className, classes.root)}
     >
       <img src={chainConfig.icon} className={classes.icon} alt="icon" />
       <Typography variant="body1">

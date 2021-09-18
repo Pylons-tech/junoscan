@@ -6,7 +6,7 @@ import {
   ClickAwayListener,
 } from '@material-ui/core';
 import { useSettingsContext } from '@contexts';
-import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
+// import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
 import BigDipperLogoRed from '@assets/big-dipper-red.svg';
 import { useStyles } from './styles';
 import { useDesktop } from './hooks';

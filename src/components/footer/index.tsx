@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
-import FooterLogoLight from '@assets/big-dipper-red.svg';
+// import FooterLogoLight from '@assets/big-dipper-red.svg';
 import FooterLogoDark from '@assets/big-dipper-white.svg';
 import Trans from 'next-translate/Trans';
 import {
@@ -21,7 +21,7 @@ import { useStyles } from './styles';
 const Footer: React.FC<{className?: string}> = ({ className }) => {
   const { t } = useTranslation();
   const classes = useStyles();
-  const { theme } = useSettingsContext();
+  // const { theme } = useSettingsContext();
 
   // ============================
   // Footer
