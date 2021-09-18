@@ -35,7 +35,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
         {/* logo */}
         {/* ============================= */}
         <div className="footer__logo--container">
-          {(theme === 'light' || theme === 'juno' || theme === 'dark') ? (
+          {(theme === 'juno') ? (
             <FooterLogoLight className="footer__logo" />
           ) : (
             <FooterLogoDark className="footer__logo" />
