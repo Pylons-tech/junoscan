@@ -5,7 +5,7 @@ import {
   AppBar,
   ClickAwayListener,
 } from '@material-ui/core';
-import { useSettingsContext } from '@contexts';
+// import { useSettingsContext } from '@contexts';
 // import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
 import BigDipperLogoRed from '@assets/big-dipper-red.svg';
 import { useStyles } from './styles';
