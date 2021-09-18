@@ -11,7 +11,7 @@ import {
 import {
   chainConfig, generalConfig,
 } from '@src/configs';
-import { useSettingsContext } from '@contexts';
+// import { useSettingsContext } from '@contexts';
 import { SocialMedia } from './components';
 import {
   footerLinks, donateLink,

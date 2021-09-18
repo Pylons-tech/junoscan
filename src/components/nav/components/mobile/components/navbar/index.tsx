@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import Link from 'next/link';
 import { ExpandMore } from '@material-ui/icons';
 import {
-  useSettingsContext, useNetworksContext,
+ useNetworksContext,
 } from '@contexts';
 // import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
 import BigDipperLogoRed from '@assets/big-dipper-red.svg';

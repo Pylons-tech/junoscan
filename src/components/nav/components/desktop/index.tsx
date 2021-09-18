@@ -23,7 +23,7 @@ const Desktop: React.FC<{
   className, title,
 }) => {
   const classes = useStyles();
-  const { theme } = useSettingsContext();
+  // const { theme } = useSettingsContext();
   const {
     isMenu,
     toggleMenu,
@@ -66,9 +66,9 @@ const Desktop: React.FC<{
           }}
         >
           <BigDipperLogoRed
-              className={classes.logo}
-              onClick={toggleMenu}
-              role="button"
+            className={classes.logo}
+            onClick={toggleMenu}
+            role="button"
           />
           <MenuItems />
         </Drawer>

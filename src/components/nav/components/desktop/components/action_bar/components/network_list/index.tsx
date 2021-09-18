@@ -14,7 +14,7 @@ const NetworkList: React.FC<{
   className, actionHeight,
 }) => {
   const classes = useStyles();
-  const { theme } = useSettingsContext();
+  // const { theme } = useSettingsContext();
 
   return (
     <Box
