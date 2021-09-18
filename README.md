@@ -1,5 +1,4 @@
-# Big Dipper Interface ✨ Cosmos 2.0
-Big Dipper is an open-source block explorer and token management tool serving over 10 proof-of-stake blockchains. It has been forked more than 100 times on GitHub and has served audiences from 140 countries and regions.
+# JunoScan is the Juno Network Explorer. A customized version of the Big Dipper 2.0 Interface by Forbole.
 
 ## Documentation
 Read our official documentation at [http://docs.bigdipper.live/](http://docs.bigdipper.live/)
