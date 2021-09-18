@@ -42,13 +42,21 @@ const Balance: React.FC<{
     display: '',
   };
 
+  // const backgrounds = [
+  //   theme.palette.custom.charts.one,
+  //   theme.palette.custom.charts.two,
+  //   theme.palette.custom.charts.three,
+  //   theme.palette.custom.charts.four,
+  //   theme.palette.custom.charts.five,
+  // ];
+
   const backgrounds = [
-    theme.palette.custom.charts.one,
-    theme.palette.custom.charts.two,
-    theme.palette.custom.charts.three,
-    theme.palette.custom.charts.four,
-    theme.palette.custom.charts.five,
-  ];
+    "#FFFFFF",
+    "#F76F68",
+    "#9AA2A8",
+    "#F76F68",
+    "#F76F68",
+  ]
 
   const formatData = formattedChartData.map((x, i) => ({
     ...x,

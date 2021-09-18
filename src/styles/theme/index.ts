@@ -107,7 +107,7 @@ export const common = {
       },
       tags: {
         zero: '#E8E8E8',
-        one: '#2460FA',
+        one: '#1EC490',
         two: '#2BA891',
         three: '#00ADE0',
         four: '#F17047',

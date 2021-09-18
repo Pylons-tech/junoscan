@@ -61,8 +61,8 @@ export const darkThemeOverride = {
       },
       tokenomics: {
         one: '#F76F68',
-        two: '#9AA2A8',
-        three: '#FFFFFF',
+        two: '#FFFFFF',
+        three: '#9AA2A8',
       },
       charts: {
         zero: '#FA5D55',
