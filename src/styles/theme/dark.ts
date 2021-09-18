@@ -41,7 +41,7 @@ export const darkThemeOverride = {
         fontTwo,
         fontThree,
         fontFour: '#999999',
-        highlight: '#4092CD', // links
+        highlight: '#F76F68', // links
       },
       primaryData: {
         one: '#F0827D',
@@ -60,16 +60,16 @@ export const darkThemeOverride = {
         three: '#FF608A',
       },
       tokenomics: {
-        one: '#43A1BE',
-        two: '#E3BB55',
-        three: '#20D292',
+        one: '#F76F68',
+        two: '#9AA2A8',
+        three: '#FFFFFF',
       },
       charts: {
         zero: '#FA5D55',
         one: '#F76F68',
-        two: '#F0827D',
-        three: '#A17370',
-        four: '#FC382D',
+        two: '#9AA2A8',
+        three: '#000000',
+        four: '#FFFFFF',
         five: '#FF241C',
       },
     },
