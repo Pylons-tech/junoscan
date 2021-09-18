@@ -1,4 +1,5 @@
-# JunoScan is the Juno Network Explorer. A customized version of the Big Dipper 2.0 Interface by Forbole.
+# JunoScan is the Open Source Juno Network Explorer. 
+A customized version of the Big Dipper 2.0 Interface by Forbole.
 
 ## Documentation
 Read our official documentation at [http://docs.bigdipper.live/](http://docs.bigdipper.live/)
