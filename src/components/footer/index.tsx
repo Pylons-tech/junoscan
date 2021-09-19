@@ -91,24 +91,24 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
       <Divider />
       <div className="footer__closing--container">
         <Typography className="footer__closing--text">
-        <Trans
-          i18nKey="common:copyright"
-          components={[
-            (
+          <Trans
+            i18nKey="common:copyright"
+            components={[
+              (
               // eslint-disable-next-line
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/master/LICENSE"
               />
-            ),
-          ]}
-          values={{
-            name: generalConfig.maintainer.name,
-          }}
-        />
-        {' '}
-        {year}
+              ),
+            ]}
+            values={{
+              name: generalConfig.maintainer.name,
+            }}
+          />
+          {' '}
+          {year}
         </Typography>
         <Typography className="footer__closing--text">
           <Trans
