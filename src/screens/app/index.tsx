@@ -39,7 +39,7 @@ function App(props: AppProps) {
         openGraph={{
           title: `${t('common:junoscan')} | ${chainConfig.title}`,
           type: 'website',
-          site_name: 'Big Dipper',
+          site_name: 'Junoscan.com',
           url: process.env.NEXT_PUBLIC_URL,
           description: t('common:description'),
           images: [
