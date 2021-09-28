@@ -1,9 +1,9 @@
-const backgroundDefault = '#000000';
-const surfaceOne = '#131316';
+const backgroundDefault = '#1B203A';
+const surfaceOne = '#272B49';
 const surfaceTwo = '#212123';
 const fontOne = '#E6E6E6';
 const fontTwo = '#C4C4C4';
-const fontThree = '#818181';
+const fontThree = '#F0827D';
 
 /** Custom theme overrides for dark mode */
 export const darkThemeOverride = {
@@ -41,13 +41,10 @@ export const darkThemeOverride = {
         fontTwo,
         fontThree,
         fontFour: '#999999',
-        highlight: '#4092CD', // links
+        highlight: '#F0827D', // links
       },
       primaryData: {
-        one: '#F0827D',
-        two: '#9AA2A8',
-        three: '#F0827D',
-        four: '#9AA2A8',
+        one: 'linear-gradient(to right top, #f08278, #cf5b6f, #a83768, #7b1760, #490057)',
       },
       results: {
         pass: '#1EC490',

@@ -60,7 +60,7 @@ const Settings: React.FC<{
         <SettingIcon />
       </div>
       <Dialog
-        maxWidth="md"
+        maxWidth="lg"
         onClose={handleCancel}
         open={open}
         className={classes.dialog}
@@ -84,9 +84,6 @@ const Settings: React.FC<{
                 variant="outlined"
                 value={state.theme}
                 onChange={(e) => handleChange('theme', e?.target?.value)}
-                MenuProps={{ MenuListProps: {
-                  disablePadding: true,
-                } }}
               >
                 {themeList
                   .map((l) => (
@@ -108,9 +105,6 @@ const Settings: React.FC<{
                 variant="outlined"
                 value={state.lang}
                 onChange={(e) => handleChange('lang', e?.target?.value)}
-                MenuProps={{ MenuListProps: {
-                  disablePadding: true,
-                } }}
               >
                 {router.locales
                   .map((l) => (
@@ -132,9 +126,6 @@ const Settings: React.FC<{
                 variant="outlined"
                 value={state.dateFormat}
                 onChange={(e) => handleChange('dateFormat', e?.target?.value)}
-                MenuProps={{ MenuListProps: {
-                  disablePadding: true,
-                } }}
               >
                 {dateFormatList
                   .map((l) => (
@@ -153,7 +144,7 @@ const Settings: React.FC<{
           <Button
             onClick={handleFormSubmit}
             color="primary"
-            // variant="contained"
+            variant="contained"
           >
             Save
           </Button>

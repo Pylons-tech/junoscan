@@ -41,6 +41,7 @@ const TabsHeader: React.FC<{
         ))}
       </Tabs>
       <Search
+        isNetwork={false}
         className={classes.searchBar}
         callback={handleSearch}
         placeholder={t('searchValidator')}

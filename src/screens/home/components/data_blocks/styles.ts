@@ -20,13 +20,13 @@ export const useStyles = () => {
           background: theme.palette.custom.primaryData.one,
         },
         blockTime: {
-          background: theme.palette.custom.primaryData.two,
+          background: theme.palette.custom.primaryData.one,
         },
         price: {
-          background: theme.palette.custom.primaryData.three,
+          background: theme.palette.custom.primaryData.one,
         },
         validators: {
-          background: theme.palette.custom.primaryData.four,
+          background: theme.palette.custom.primaryData.one,
         },
       });
     }, { index: 1 },

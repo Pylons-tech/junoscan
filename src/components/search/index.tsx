@@ -11,10 +11,12 @@ const Search: React.FC<{
   className?: string;
   placeholder: string;
   callback: (value: string) => void;
+  isNetwork: boolean;
 }> = ({
   className,
   placeholder,
   callback,
+  isNetwork,
 }) => {
   const classes = useStyles();
 
@@ -24,24 +26,27 @@ const Search: React.FC<{
     handleKeyDown,
     value,
   } = useSearch(callback);
+
   return (
     <form
-      className={classnames(className, classes.root)}
+      className={classnames(className, classes.root, { open: isNetwork })}
       onSubmit={handleOnSubmit}
     >
       <InputBase
+        type="search"
+        className={classnames({ open: isNetwork })}
         placeholder={placeholder}
         onChange={handleOnChange}
         onKeyDown={handleKeyDown}
         value={value}
         inputProps={{
-          'aria-label': placeholder,
+				  'aria-label': placeholder,
         }}
         startAdornment={(
           <InputAdornment position="start">
             <SearchIcon fontSize="small" />
           </InputAdornment>
-        )}
+   )}
       />
     </form>
   );

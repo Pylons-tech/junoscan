@@ -5,16 +5,13 @@ import FooterLogoLight from '@assets/big-dipper-red.svg';
 import FooterLogoDark from '@assets/big-dipper-white.svg';
 import Trans from 'next-translate/Trans';
 import {
-  Divider,
   Typography,
 } from '@material-ui/core';
-import {
-  chainConfig, generalConfig,
-} from '@src/configs';
+import { generalConfig } from '@src/configs';
 import { useSettingsContext } from '@contexts';
 import { SocialMedia } from './components';
 import {
-  footerLinks, donateLink,
+  footerLinks,
 } from './utils';
 import { useStyles } from './styles';
 
@@ -32,39 +29,26 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
     <div className={classnames(className, classes.root)}>
       <div className={classnames('footer')}>
         {/* ============================= */}
-        {/* logo */}
-        {/* ============================= */}
-        <div className="footer__logo--container">
-          {(theme === 'light' || theme === 'juno') ? (
-            <FooterLogoLight className="footer__logo" />
-          ) : (
-            <FooterLogoDark className="footer__logo" />
-          )}
-          <p className="footer__slogan">{chainConfig.title}</p>
-        </div>
-        {/* ============================= */}
         {/* links */}
         {/* ============================= */}
         <div className="footer__links">
           {footerLinks.map((group) => {
-            return (
-              <div key={group.key} className={`${group.key} links__group`}>
-                <h3>{t(`common:${group.key}`)}</h3>
-                {
-                    group.links.map((x) => {
-                      return (
-                        <a
-                          key={x.url}
-                          href={x.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {t(`common:${x.key}`)}
-                        </a>
-                      );
-                    })
-                  }
-              </div>
+					  return (
+  <div key={group.key} className={`${group.key} links__group`}>
+    <h3>{t(`common:${group.key}`)}</h3>
+    {group.links.map((x) => {
+      return (
+        <a
+          key={x.url}
+          href={x.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t(`common:${x.key}`)}
+        </a>
+      );
+    })}
+  </div>
             );
           })}
           {/* ============================= */}
@@ -74,25 +58,24 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
             <h3>{t('common:community')}</h3>
             <SocialMedia />
             <div>
-              <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
-              <a
-                href={donateLink.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {/* <Button
-                  className="footer__donate-button"
-                  variant="contained"
-                  color="primary"
-                >
-                  {t('common:donate')}
-                </Button> */}
-              </a>
+              <p className="footer__donate--excerpt">
+                {t('common:donateExcerpt')}
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <Divider />
+      <div className="footer__divider">
+        <hr className="footer__divideBar" />
+        <div className="footer__logo--container">
+          {theme === 'light' || theme === 'juno' ? (
+            <FooterLogoLight className="footer__logo" />
+          ) : (
+            <FooterLogoDark className="footer__logo" />
+          )}
+        </div>
+        <hr className="footer__divideBar" />
+      </div>
       <div className="footer__closing--container">
         <Typography className="footer__closing--text">
           {t('common:copyright')}
@@ -103,13 +86,15 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
           <Trans
             i18nKey="common:maintainBy"
             components={[
-              (
-                // eslint-disable-next-line
-                <a target="_blank" rel="noreferrer" href={generalConfig.maintainer.url} />
-              ),
+							// eslint-disable-next-line
+							<a
+  target="_blank"
+  rel="noreferrer"
+  href={generalConfig.maintainer.url}
+							/>,
             ]}
             values={{
-              name: generalConfig.maintainer.name,
+						  name: generalConfig.maintainer.name,
             }}
           />
         </Typography>

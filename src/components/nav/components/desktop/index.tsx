@@ -12,7 +12,6 @@ import { useStyles } from './styles';
 import { useDesktop } from './hooks';
 import {
   MenuItems,
-  TitleBar,
 } from '..';
 import { ActionBar } from './components';
 
@@ -20,7 +19,7 @@ const Desktop: React.FC<{
   className?: string;
   title: string;
 }> = ({
-  className, title,
+  className,
 }) => {
   const classes = useStyles();
   const { theme } = useSettingsContext();
@@ -46,7 +45,6 @@ const Desktop: React.FC<{
             toggleNetwork={toggleNetwork}
             isNetwork={isNetwork}
           />
-          <TitleBar title={title} />
         </AppBar>
         <Drawer
           variant="permanent"

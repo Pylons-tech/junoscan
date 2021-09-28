@@ -3,16 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = () => {
   const styles = makeStyles(
     (theme) => {
-      return ({
+      return {
         root: {
           overflow: 'hidden',
-          [theme.breakpoints.up('lg')]: {
-
-          },
+          [theme.breakpoints.up('lg')]: {},
         },
-        header: {
-
-        },
+        header: {},
         item: {
           padding: theme.spacing(2, 0),
           color: theme.palette.custom.fonts.fontTwo,
@@ -42,7 +38,7 @@ export const useStyles = () => {
             },
           },
         },
-      });
+      };
     },
   )();
 

@@ -5,10 +5,10 @@ export const useStyles = () => {
     (theme) => {
       return ({
         root: {
-          padding: theme.spacing(0.8, 2),
+          padding: theme.spacing(2),
           background: theme.palette.background.paper,
           color: theme.palette.custom.fonts.fontTwo,
-          borderRadius: theme.shape.borderRadius,
+          borderRadius: theme.shape.borderRadius * 4,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',

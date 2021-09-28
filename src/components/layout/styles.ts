@@ -24,7 +24,7 @@ export const useStyles = () => {
           },
         },
         appBarPlaceholder: {
-          ...theme.mixins.toolbar,
+          height: '6rem',
         },
         children: {
           flexGrow: 1,

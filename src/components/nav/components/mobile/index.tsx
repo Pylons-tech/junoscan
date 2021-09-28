@@ -4,7 +4,7 @@ import { useGetComponentDimension } from '@hooks';
 import { useStyles } from './styles';
 import { useMobile } from './hooks';
 import {
-  Networks, TitleBar,
+  Networks,
 } from '..';
 import {
   Menu,
@@ -16,7 +16,7 @@ const Mobile: React.FC<{
   className?: string;
   title: string;
 }> = ({
-  className, title,
+  className,
 }) => {
   const {
     ref: heightRef,
@@ -63,7 +63,6 @@ const Mobile: React.FC<{
       {/* Height placeholder */}
       {/* ============================== */}
       <div style={{ height }} />
-      <TitleBar title={title} />
     </div>
   );
 };

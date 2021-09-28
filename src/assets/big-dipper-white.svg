@@ -3,10 +3,10 @@
 <svg version="1.1" id="home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 175.8 36.1" style="enable-background:new 0 0 175.8 36.1;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#8A8E9D;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st3{fill:#6D7284;}
+	.st0{fill:#f08278;}
+	.st1{fill:#FFFFFF00;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#fff;}
+	.st3{fill:#f08278;}
 	.st4{font-family:'Arial-BoldMT';}
 	.st5{font-size:23px;}
 </style>
@@ -38,5 +38,5 @@
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 46.3558 26.501)" class="st3 st4 st5">JUNOSCAN</text>
+<text transform="matrix(1 0 0 1 56 26.501)" class="st3 st4 st5">JunoScan</text>
 </svg>

@@ -1,5 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
+import { motion } from 'framer-motion';
 import { Typography } from '@material-ui/core';
 import { useStyles } from './styles';
 
@@ -17,21 +18,26 @@ const SingleBlock: React.FC<{
   const classes = useStyles();
 
   return (
-    <div className={classnames(className, classes.root)}>
+    <motion.div
+      whileHover={{
+			  scale: 1.05,
+        filter: 'saturate(1.5)',
+			  transition: { duration: 0.3 },
+      }}
+      className={classnames(className, classes.root)}
+    >
       <Typography variant="body2" className="label">
         {label}
       </Typography>
       <div className="content">
-        <Typography variant="h1">
-          {value}
-        </Typography>
+        <Typography variant="h1">{value}</Typography>
         {!!description && (
-          <Typography variant="caption" className="description">
-            {description}
-          </Typography>
+        <Typography variant="caption" className="description">
+          {description}
+        </Typography>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

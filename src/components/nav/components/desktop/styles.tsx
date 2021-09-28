@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = () => {
   const styles = makeStyles(
     (theme) => {
-      const OPEN_DRAWER_WIDTH = 230;
-      const CLOSED_DRAWER_WIDTH = 59;
+      const OPEN_DRAWER_WIDTH = 200;
+      const CLOSED_DRAWER_WIDTH = 80;
 
-      return ({
+      return {
         root: {
           '& .MuiDrawer-paperAnchorDockedLeft': {
             border: 'none',
@@ -21,10 +21,10 @@ export const useStyles = () => {
         },
         appBar: {
           ...theme.mixins.toolbar,
+          height: '6.5rem !important',
           display: 'flex',
           alignItems: 'flex-end',
           justifyContent: 'flex-start',
-          background: theme?.palette?.background?.default,
           color: theme?.palette?.custom?.fonts?.fontTwo ?? 'inherit',
           width: `calc(100% - ${CLOSED_DRAWER_WIDTH}px)`,
           zIndex: theme.zIndex.drawer + 1,
@@ -48,17 +48,18 @@ export const useStyles = () => {
           width: OPEN_DRAWER_WIDTH,
           flexShrink: 0,
           whiteSpace: 'nowrap',
-          paddingLeft: theme.spacing(2),
           boxSizing: 'border-box',
         },
         drawerOpen: {
           width: OPEN_DRAWER_WIDTH,
+          padding: theme.spacing(1),
           transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.easeIn,
             duration: theme.transitions.duration.enteringScreen,
           }),
         },
         drawerClose: {
+          padding: theme.spacing(1),
           transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.easeIn,
             duration: theme.transitions.duration.enteringScreen,
@@ -66,7 +67,7 @@ export const useStyles = () => {
           overflowX: 'hidden',
           width: CLOSED_DRAWER_WIDTH,
         },
-      });
+      };
     },
   )();
 

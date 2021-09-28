@@ -6,9 +6,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import {
   lightTemplate,
   darkTemplate,
-  deuteranopiaTemplate,
-  tritanopiaTemplate,
-  junoTemplate,
 } from '@styles';
 import { usePersistedState } from '@hooks';
 import {
@@ -28,17 +25,11 @@ export const useTheme = (initialState:ThemeState) => {
   const themeList = [
     'light',
     'dark',
-    'deuteranopia',
-    'tritanopia',
-    'juno',
   ];
 
   const themeDictionary = {
     light: lightTemplate,
     dark: darkTemplate,
-    deuteranopia: deuteranopiaTemplate,
-    tritanopia: tritanopiaTemplate,
-    juno: junoTemplate,
   };
 
   useEffect(() => {
