@@ -11,7 +11,7 @@
     "account": "juno"
   },
   "genesis": {
-    "time": "2021-09-08T16:00:00",
+    "time": "2021-10-01T15:00:00Z",
     "height": 1
   },
   "primaryTokenUnit": "ujuno",
@@ -22,7 +22,7 @@
     }
   },
   "extra": {
-    "desmosProfile": true,
+    "desmosProfile": false,
     "forboleX": false
   }
 }
