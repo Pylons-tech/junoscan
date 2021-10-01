@@ -37,19 +37,19 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
   <div key={group.key} className={`${group.key} links__group`}>
     <h3>{t(`common:${group.key}`)}</h3>
     {group.links.map((x) => {
-      return (
-        <a
-          key={x.url}
-          href={x.url}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {t(`common:${x.key}`)}
-        </a>
-      );
+								  return (
+  <a
+    key={x.url}
+    href={x.url}
+    target="_blank"
+    rel="noreferrer"
+  >
+    {t(`common:${x.key}`)}
+  </a>
+								  );
     })}
   </div>
-            );
+					  );
           })}
           {/* ============================= */}
           {/* social */}
@@ -78,6 +78,10 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
       </div>
       <div className="footer__closing--container">
         <Typography className="footer__closing--text">
+          <a href="https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/master/LICENSE">
+            License
+          </a>
+          {' '}
           {t('common:copyright')}
           {' '}
           {year}

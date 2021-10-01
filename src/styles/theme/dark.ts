@@ -1,4 +1,5 @@
 const backgroundDefault = '#1B203A';
+const backgroundAlpha = 'linear-gradient(to bottom, #1b203a 60%, #1b203a00)';
 const surfaceOne = '#272B49';
 const surfaceTwo = '#212123';
 const fontOne = '#E6E6E6';
@@ -32,7 +33,7 @@ export const darkThemeOverride = {
     },
     custom: {
       general: {
-        background: backgroundDefault, // same as background default
+        background: backgroundAlpha, // same as background default
         surfaceOne, // same as background paper
         surfaceTwo, // striped tables
       },

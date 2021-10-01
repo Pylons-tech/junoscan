@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = () => {
   const styles = makeStyles(
     (theme) => {
-      return ({
+      return {
         root: {
           [theme.breakpoints.up('lg')]: {
             display: 'flex',
@@ -24,7 +24,7 @@ export const useStyles = () => {
           },
         },
         appBarPlaceholder: {
-          height: '6rem',
+          height: '5rem',
         },
         children: {
           flexGrow: 1,
@@ -35,7 +35,7 @@ export const useStyles = () => {
             flex: 1,
           },
         },
-      });
+      };
     },
   )();
 

@@ -1,4 +1,5 @@
 const backgroundDefault = '#F8F8F8';
+const backgroundAlpha = '#F8F8F86B';
 const surfaceOne = '#FFFFFF';
 const surfaceTwo = '#F8F8F8';
 const fontOne = '#000000';
@@ -23,6 +24,7 @@ export const lightThemeOverride = {
     },
     background: {
       default: backgroundDefault,
+      transparent: backgroundAlpha,
       paper: surfaceOne,
     },
     divider: '#E8E8E8',

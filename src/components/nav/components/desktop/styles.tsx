@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = () => {
   const styles = makeStyles(
     (theme) => {
-      const OPEN_DRAWER_WIDTH = 200;
+      const OPEN_DRAWER_WIDTH = 220;
       const CLOSED_DRAWER_WIDTH = 80;
 
       return {
@@ -20,8 +20,8 @@ export const useStyles = () => {
           },
         },
         appBar: {
-          ...theme.mixins.toolbar,
-          height: '6.5rem !important',
+          background: theme.palette.custom.general.background,
+          height: '5.5rem !important',
           display: 'flex',
           alignItems: 'flex-end',
           justifyContent: 'flex-start',

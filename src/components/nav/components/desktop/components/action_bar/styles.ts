@@ -6,11 +6,11 @@ export const useStyles = () => {
       return {
         root: {
           width: '100%',
-          background: theme.palette.background.default,
+          background: theme.palette.custom.general.background,
           display: 'flex',
           justifyContent: 'flex-end',
           alignItems: 'center',
-          padding: theme.spacing(3),
+          padding: theme.spacing(2, 3, 2, 3),
         },
         actions: {
           width: '100%',
