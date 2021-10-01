@@ -21,8 +21,10 @@ import {
   useGenesis,
 } from './hooks';
 
-ReactGA.initialize('UA-209046893-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
+if (typeof window !== 'undefined') {
+  ReactGA.initialize('UA-209046893-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 function App(props: AppProps) {
   useApp();
