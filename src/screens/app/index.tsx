@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import ReactGA from 'react-ga';
 import useTranslation from 'next-translate/useTranslation';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -19,6 +20,9 @@ import {
   useApp,
   useGenesis,
 } from './hooks';
+
+ReactGA.initialize('UA-209046893-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App(props: AppProps) {
   useApp();
@@ -44,8 +48,8 @@ function App(props: AppProps) {
           description: t('common:description'),
           images: [
             {
-              url: 'https://bigdipper.live/images/big-dipper-social-media.png',
-              width: 800,
+              url: 'https://pbs.twimg.com/media/FAEcrT1X0AATk7R.jpg',
+              width: 1200,
               height: 600,
               alt: 'Preview Photo',
             },
