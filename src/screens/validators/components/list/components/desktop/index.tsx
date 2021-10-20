@@ -39,6 +39,7 @@ const Desktop: React.FC<{
 
   const formattedItems = props.items.map((x, i) => {
     const condition = x.status === 3 ? getValidatorConditionClass(x.condition) : undefined;
+    const perc = x.status === 3 ? `${numeral(x.condition).format('0.[00]')}%` : undefined;
     return ({
       idx: `#${i + 1}`,
       delegators: numeral(x.delegators).format('0,0'),
@@ -52,7 +53,7 @@ const Desktop: React.FC<{
       commission: `${numeral(x.commission).format('0.[00]')}%`,
       self: `${numeral(x.selfPercent).format('0.[00]')}%`,
       condition: (
-        <Condition className={condition} />
+        <span><Condition className={condition} /> <small>{perc}</small></span>
       ),
       votingPower: (
         <VotingPower
