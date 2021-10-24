@@ -182,7 +182,7 @@ export const useMarket = (initalState: ChainState) => {
   useMarketDataQuery(
     {
       variables: {
-        denom: chainConfig.primaryTokenUnit,
+        denom: "juno",
       },
       onError: () => {
         setState((prevState) => ({
