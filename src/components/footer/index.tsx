@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
 // import FooterLogoLight from '@assets/big-dipper-red.svg';
-import FooterLogoDark from '@assets/big-dipper-white.svg';
+//import FooterLogoDark from '@assets/big-dipper-white.svg';
+import FooterLogoDark from '@assets/add/pylonsIcon.svg'; 
 import Trans from 'next-translate/Trans';
 import {
   Divider,
@@ -35,8 +36,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
         {/* logo */}
         {/* ============================= */}
         <div className="footer__logo--container">
-          <FooterLogoDark className="footer__logo" />
-          <p className="footer__slogan">{chainConfig.title}</p>
+          <FooterLogoDark className="footer__logo" /> 
         </div>
         {/* ============================= */}
         {/* links */}

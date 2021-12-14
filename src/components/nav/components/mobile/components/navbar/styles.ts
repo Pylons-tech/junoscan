@@ -15,7 +15,7 @@ export const useStyles = () => {
           zIndex: 200,
         },
         logo: {
-          width: '120px',
+          width: '180px',
           '&:hover': {
             cursor: 'pointer',
           },

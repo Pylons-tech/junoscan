@@ -27,6 +27,13 @@ export const useStyles = () => {
           height: '56px',
           // width: '225px',
         },
+        pylonIcon: {
+          width: '195px',
+          height: '70px',
+          '&:hover': {
+            cursor: 'pointer',
+          },
+        },
         content: {
           width: '100%',
           background: theme.palette.custom.general.surfaceOne,

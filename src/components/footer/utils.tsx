@@ -11,7 +11,7 @@ export const donateLink = {
 
 export const footerLinks = [
   {
-    key: 'junoscan',
+    key: 'pylonsinc',
     links: [
       {
         key: 'about',
@@ -32,7 +32,7 @@ export const footerLinks = [
     ],
   },
   {
-    key: 'juno',
+    key: 'bigDipper',
     links: [
       {
         key: 'github',
