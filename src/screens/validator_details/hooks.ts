@@ -31,6 +31,7 @@ export const useValidatorDetails = () => {
     findOperator,
     validatorToDelegatorAddress,
   } = useChainContext();
+ 
   const [state, setState] = useState<ValidatorDetailsState>({
     loading: true,
     exists: true,
@@ -127,6 +128,7 @@ export const useValidatorDetails = () => {
     onCompleted: (data) => {
       handleSetState(formatAccountQuery(data));
     },
+
   });
 
   useValidatorLastSeenListenerSubscription({
@@ -145,6 +147,16 @@ export const useValidatorDetails = () => {
       limit: LIMIT + 1, // to check if more exist
       offset: 0,
       address: `{${R.pathOr('', ['query', 'address'], router)}}`,
+    },
+    onError: (e) => {
+      console.log('useGetMessagesByAddressQuery error = ', e);  
+      const stateChange = {
+        transactions: { 
+          isNextPageLoading: false, 
+        },
+      };
+
+      handleSetState(stateChange);
     },
     onCompleted: (data) => {
       const itemsLength = data.messagesByAddress.length;

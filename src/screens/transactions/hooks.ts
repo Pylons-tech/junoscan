@@ -7,9 +7,9 @@ import {
 } from '@graphql/types';
 import { TransactionsState } from './types';
 
-export const useTransactions = () => {
+export const useTransactions = () => { 
   const [state, setState] = useState<TransactionsState>({
-    loading: true,
+    loading: false,
     exists: true,
     hasNextPage: false,
     isNextPageLoading: false,
@@ -48,12 +48,13 @@ export const useTransactions = () => {
       limit: 50,
       offset: 1,
     },
-    onError: () => {
+    onError: (e) => {
+      console.log('transactions error = ', e); 
       handleSetState({
         loading: false,
       });
     },
-    onCompleted: (data) => {
+    onCompleted: (data) => { 
       const newItems = R.uniq([...state.items, ...formatTransactions(data)]);
       handleSetState({
         items: newItems,

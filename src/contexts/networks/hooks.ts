@@ -28,8 +28,9 @@ export const useNetwork = () => {
       const formattedData = data
         .map((x) => BigDipperNetwork.fromJson(x))
         .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1));
-      setNetworks(formattedData);
+      setNetworks(formattedData); 
     };
+    
     getNetworkList();
   }, []);
 

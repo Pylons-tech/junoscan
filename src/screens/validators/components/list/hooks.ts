@@ -43,6 +43,9 @@ export const useValidators = () => {
         ...formatValidators(data),
       });
     },
+    onError: (e) => {
+      console.log('validator error = ', e); 
+    },
   });
 
   // ==========================

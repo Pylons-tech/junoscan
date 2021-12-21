@@ -1,16 +1,14 @@
 import React from 'react';
 import classnames from 'classnames';
 import useTranslation from 'next-translate/useTranslation';
-// import FooterLogoLight from '@assets/big-dipper-red.svg';
-//import FooterLogoDark from '@assets/big-dipper-white.svg';
-import FooterLogoDark from '@assets/add/pylonsIcon.svg'; 
+import FooterLogoDark from '@assets/add/pylonsIcon.svg';
 import Trans from 'next-translate/Trans';
 import {
   Divider,
   Typography,
 } from '@material-ui/core';
 import {
-  chainConfig, generalConfig,
+  generalConfig,
 } from '@src/configs';
 // import { useSettingsContext } from '@contexts';
 import { SocialMedia } from './components';
@@ -36,7 +34,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
         {/* logo */}
         {/* ============================= */}
         <div className="footer__logo--container">
-          <FooterLogoDark className="footer__logo" /> 
+          <FooterLogoDark className="footer__logo" />
         </div>
         {/* ============================= */}
         {/* links */}
