@@ -19063,7 +19063,7 @@ export type LatestBlockTimestampQueryHookResult = ReturnType<typeof useLatestBlo
 export type LatestBlockTimestampLazyQueryHookResult = ReturnType<typeof useLatestBlockTimestampLazyQuery>;
 export type LatestBlockTimestampQueryResult = Apollo.QueryResult<LatestBlockTimestampQuery, LatestBlockTimestampQueryVariables>;
 export const BlocksListenerDocument = gql`
-    subscription BlocksListener($limit: Int = 7, $offset: Int = 0) {
+    query Blocks($limit: Int = 7, $offset: Int = 0) {
   blocks: block(limit: $limit, offset: $offset, order_by: {height: desc}) {
     height
     txs: num_txs
@@ -19096,9 +19096,14 @@ export const BlocksListenerDocument = gql`
  * });
  */
 export function useBlocksListenerSubscription(baseOptions?: Apollo.SubscriptionHookOptions<BlocksListenerSubscription, BlocksListenerSubscriptionVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useSubscription<BlocksListenerSubscription, BlocksListenerSubscriptionVariables>(BlocksListenerDocument, options);
-      }
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useSubscription<BlocksListenerSubscription, BlocksListenerSubscriptionVariables>(BlocksListenerDocument, options);
+} 
+
+export function useBlocksCustomSubscription(baseOptions?: Apollo.QueryHookOptions<BlocksListenerSubscription, BlocksListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions} 
+  return Apollo.useQuery<BlocksListenerSubscription, BlocksListenerSubscriptionVariables>(BlocksListenerDocument, options);
+}
 export type BlocksListenerSubscriptionHookResult = ReturnType<typeof useBlocksListenerSubscription>;
 export type BlocksListenerSubscriptionResult = Apollo.SubscriptionResult<BlocksListenerSubscription>;
 export const BlocksDocument = gql`
@@ -19801,7 +19806,7 @@ export type TransactionDetailsQueryHookResult = ReturnType<typeof useTransaction
 export type TransactionDetailsLazyQueryHookResult = ReturnType<typeof useTransactionDetailsLazyQuery>;
 export type TransactionDetailsQueryResult = Apollo.QueryResult<TransactionDetailsQuery, TransactionDetailsQueryVariables>;
 export const TransactionsListenerDocument = gql`
-    subscription TransactionsListener($limit: Int = 7, $offset: Int = 0) {
+    query Transactions($limit: Int = 7, $offset: Int = 0) {
   transactions: transaction(
     limit: $limit
     offset: $offset
@@ -19838,7 +19843,12 @@ export const TransactionsListenerDocument = gql`
 export function useTransactionsListenerSubscription(baseOptions?: Apollo.SubscriptionHookOptions<TransactionsListenerSubscription, TransactionsListenerSubscriptionVariables>) {
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useSubscription<TransactionsListenerSubscription, TransactionsListenerSubscriptionVariables>(TransactionsListenerDocument, options);
-      }
+      }  
+
+export function useTransactionsCustomSubscription(baseOptions?: Apollo.QueryHookOptions<TransactionsListenerSubscription, TransactionsListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useQuery<TransactionsListenerSubscription, TransactionsListenerSubscriptionVariables>(TransactionsListenerDocument, options);
+}
 export type TransactionsListenerSubscriptionHookResult = ReturnType<typeof useTransactionsListenerSubscription>;
 export type TransactionsListenerSubscriptionResult = Apollo.SubscriptionResult<TransactionsListenerSubscription>;
 export const TransactionsDocument = gql`

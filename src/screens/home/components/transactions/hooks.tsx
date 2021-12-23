@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   useTransactionsListenerSubscription,
   TransactionsListenerSubscription,
+  useTransactionsCustomSubscription
 } from '@graphql/types';
 import { TransactionsState } from './types';
 
@@ -13,10 +14,10 @@ export const useTransactions = () => {
   // ================================
   // txs subscription
   // ================================
-  useTransactionsListenerSubscription({
-    onSubscriptionData: (data) => {
+  useTransactionsCustomSubscription({
+    onCompleted: (data) => { 
       setState({
-        items: formatTransactions(data.subscriptionData.data),
+        items: formatTransactions(data),
       });
     },
   });

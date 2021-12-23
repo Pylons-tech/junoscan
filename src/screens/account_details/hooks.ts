@@ -119,7 +119,7 @@ export const useAccountDetails = () => {
       address: R.pathOr('', ['query', 'address'], router),
       utc: dayjs.utc().format('YYYY-MM-DDTHH:mm:ss'),
     },
-    onCompleted: (data) => {
+    onCompleted: (data) => { 
       handleSetState(formatAccountQuery(data));
     },
   });

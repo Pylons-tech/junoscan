@@ -4,6 +4,7 @@ import {
   useBlocksListenerSubscription,
   useBlocksQuery,
   BlocksListenerSubscription,
+  useBlocksCustomSubscription
 } from '@graphql/types';
 import { useChainContext } from '@contexts';
 import {
@@ -28,20 +29,22 @@ export const useBlocks = () => {
   // ================================
   // block subscription
   // ================================
-  useBlocksListenerSubscription({
-    variables: {
-      limit: 1,
-      offset: 0,
-    },
-    onSubscriptionData: (data) => {
+  const blockSubscription = useBlocksCustomSubscription({ 
+    onCompleted: (data) => {   
       handleSetState({
         loading: false,
         items: [
-          ...formatBlocks(data.subscriptionData.data),
+          ...formatBlocks(data),
           ...state.items,
         ],
       });
     },
+    onError: (e) => {
+      console.log('blockSubscription error = ', e); 
+      handleSetState({
+        loading: false,
+      });
+    }
   });
 
   // ================================

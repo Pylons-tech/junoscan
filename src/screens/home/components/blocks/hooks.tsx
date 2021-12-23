@@ -3,6 +3,7 @@ import * as R from 'ramda';
 import {
   useBlocksListenerSubscription,
   BlocksListenerSubscription,
+  useBlocksCustomSubscription
 } from '@graphql/types';
 import { useChainContext } from '@contexts';
 import { BlocksState } from './types';
@@ -20,12 +21,26 @@ export const useBlocks = () => {
   // ================================
   // block subscription
   // ================================
-  useBlocksListenerSubscription({
-    onSubscriptionData: (data) => {
+  const blockSubscription = useBlocksCustomSubscription({
+    variables: {
+      limit: 1,
+      offset: 0,
+    },
+    onCompleted: (data) => {   
       handleSetState({
-        items: formatBlocks(data.subscriptionData.data),
+        loading: false,
+        items: [
+          ...formatBlocks(data),
+          ...state.items,
+        ],
       });
     },
+    onError: (e) => {
+      console.log('blockSubscription error = ', e); 
+      handleSetState({
+        loading: false,
+      });
+    }
   });
 
   const formatBlocks = (data: BlocksListenerSubscription) => {

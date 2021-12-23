@@ -4,6 +4,7 @@ import {
   useTransactionsQuery,
   useTransactionsListenerSubscription,
   TransactionsListenerSubscription,
+  useTransactionsCustomSubscription
 } from '@graphql/types';
 import { TransactionsState } from './types';
 
@@ -24,16 +25,16 @@ export const useTransactions = () => {
   // ================================
   // tx subscription
   // ================================
-  useTransactionsListenerSubscription({
+  useTransactionsCustomSubscription({
     variables: {
       limit: 1,
       offset: 0,
     },
-    onSubscriptionData: (data) => {
+    onCompleted: (data) => { 
       handleSetState({
         loading: false,
         items: [
-          ...formatTransactions(data.subscriptionData.data),
+          ...formatTransactions(data),
           ...state.items,
         ],
       });
