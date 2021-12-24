@@ -29,7 +29,11 @@ export const useBlocks = () => {
   // ================================
   // block subscription
   // ================================
-  const blockSubscription = useBlocksCustomSubscription({ 
+  const blockSubscription = useBlocksCustomSubscription({
+    variables: {
+      limit: 1,
+      offset: 0,
+    },
     onCompleted: (data) => {   
       handleSetState({
         loading: false,

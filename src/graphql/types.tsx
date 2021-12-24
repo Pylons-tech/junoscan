@@ -18968,6 +18968,14 @@ export const LatestBlockHeightListenerDocument = gql`
 }
     `;
 
+export const LatestBlockHeightQueryDocument = gql`
+    query LatestBlockHeightListener($offset: Int = 0) {
+  height: block(order_by: {height: desc}, limit: 1, offset: $offset) {
+    height
+  }
+}
+    `;
+
 /**
  * __useLatestBlockHeightListenerSubscription__
  *
@@ -18988,6 +18996,13 @@ export function useLatestBlockHeightListenerSubscription(baseOptions?: Apollo.Su
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useSubscription<LatestBlockHeightListenerSubscription, LatestBlockHeightListenerSubscriptionVariables>(LatestBlockHeightListenerDocument, options);
       }
+
+export function useLatestBlockHeightCustomSubscription(baseOptions?: Apollo.QueryHookOptions<LatestBlockHeightListenerSubscription, LatestBlockHeightListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useQuery<LatestBlockHeightListenerSubscription, LatestBlockHeightListenerSubscriptionVariables>(LatestBlockHeightQueryDocument, options);
+}
+
+      
 export type LatestBlockHeightListenerSubscriptionHookResult = ReturnType<typeof useLatestBlockHeightListenerSubscription>;
 export type LatestBlockHeightListenerSubscriptionResult = Apollo.SubscriptionResult<LatestBlockHeightListenerSubscription>;
 export const AverageBlockTimeDocument = gql`
@@ -19307,6 +19322,21 @@ export const OnlineVotingPowerListenerDocument = gql`
 }
     `;
 
+export const OnlineVotingPowerQueryDocument = gql`
+    query OnlineVotingPowerListener {
+  block(offset: 0, limit: 1, order_by: {height: desc}) {
+    height
+    validatorVotingPowersAggregate: validator_voting_powers_aggregate {
+      aggregate {
+        sum {
+          votingPower: voting_power
+        }
+      }
+    }
+  }
+}
+    `;
+
 /**
  * __useOnlineVotingPowerListenerSubscription__
  *
@@ -19326,10 +19356,23 @@ export function useOnlineVotingPowerListenerSubscription(baseOptions?: Apollo.Su
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useSubscription<OnlineVotingPowerListenerSubscription, OnlineVotingPowerListenerSubscriptionVariables>(OnlineVotingPowerListenerDocument, options);
       }
+
+export function useOnlineVotingPowerQuerySubscription(baseOptions?: Apollo.QueryHookOptions<OnlineVotingPowerListenerSubscription, OnlineVotingPowerListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useQuery<OnlineVotingPowerListenerSubscription, OnlineVotingPowerListenerSubscriptionVariables>(OnlineVotingPowerQueryDocument, options);
+}
 export type OnlineVotingPowerListenerSubscriptionHookResult = ReturnType<typeof useOnlineVotingPowerListenerSubscription>;
 export type OnlineVotingPowerListenerSubscriptionResult = Apollo.SubscriptionResult<OnlineVotingPowerListenerSubscription>;
 export const TotalVotingPowerListenerDocument = gql`
     subscription TotalVotingPowerListener {
+  stakingPool: staking_pool(order_by: {height: desc}, limit: 1) {
+    bonded: bonded_tokens
+  }
+}
+    `;
+
+export const TotalVotingPowerQueryDocument = gql`
+    query TotalVotingPowerListener {
   stakingPool: staking_pool(order_by: {height: desc}, limit: 1) {
     bonded: bonded_tokens
   }
@@ -19355,6 +19398,10 @@ export function useTotalVotingPowerListenerSubscription(baseOptions?: Apollo.Sub
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useSubscription<TotalVotingPowerListenerSubscription, TotalVotingPowerListenerSubscriptionVariables>(TotalVotingPowerListenerDocument, options);
       }
+export function useTotalVotingPowerQuerySubscription(baseOptions?: Apollo.QueryHookOptions<TotalVotingPowerListenerSubscription, TotalVotingPowerListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useQuery<TotalVotingPowerListenerSubscription, TotalVotingPowerListenerSubscriptionVariables>(TotalVotingPowerQueryDocument, options);
+}
 export type TotalVotingPowerListenerSubscriptionHookResult = ReturnType<typeof useTotalVotingPowerListenerSubscription>;
 export type TotalVotingPowerListenerSubscriptionResult = Apollo.SubscriptionResult<TotalVotingPowerListenerSubscription>;
 export const StakingParamsDocument = gql`
@@ -19494,6 +19541,14 @@ export const ProposalVotesListenerDocument = gql`
   }
 }
     `;
+export const ProposalVotesQueryDocument = gql`
+query ProposalVotesListener($proposalId: Int) {
+proposalVote: proposal_vote(where: {proposal_id: {_eq: $proposalId}}) {
+option
+voterAddress: voter_address
+}
+}
+`;
 
 /**
  * __useProposalVotesListenerSubscription__
@@ -19515,6 +19570,10 @@ export function useProposalVotesListenerSubscription(baseOptions?: Apollo.Subscr
         const options = {...defaultOptions, ...baseOptions}
         return Apollo.useSubscription<ProposalVotesListenerSubscription, ProposalVotesListenerSubscriptionVariables>(ProposalVotesListenerDocument, options);
       }
+export function useProposalVotesQuerySubscription(baseOptions?: Apollo.QueryHookOptions<ProposalVotesListenerSubscription, ProposalVotesListenerSubscriptionVariables>) {
+  const options = {...defaultOptions, ...baseOptions}
+  return Apollo.useQuery<ProposalVotesListenerSubscription, ProposalVotesListenerSubscriptionVariables>(ProposalVotesQueryDocument, options);
+}    
 export type ProposalVotesListenerSubscriptionHookResult = ReturnType<typeof useProposalVotesListenerSubscription>;
 export type ProposalVotesListenerSubscriptionResult = Apollo.SubscriptionResult<ProposalVotesListenerSubscription>;
 export const ProposalTallyListenerDocument = gql`

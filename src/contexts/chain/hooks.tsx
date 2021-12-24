@@ -182,7 +182,7 @@ export const useMarket = (initalState: ChainState) => {
   useMarketDataQuery(
     {
       variables: {
-        denom: process.env.PORT === "production" ? "juno" : chainConfig.primaryTokenUnit,
+        denom: process.env.PORT === "production" ? "upylon" : chainConfig.primaryTokenUnit,
       },
       onError: () => {
         setState((prevState) => ({

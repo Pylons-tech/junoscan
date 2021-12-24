@@ -13,7 +13,7 @@ const DataBlocks: React.FC<{
 }) => {
   const { t } = useTranslation('home');
   const classes = useStyles();
-  const { state } = useDataBlocks();
+  const { state } = useDataBlocks(); 
   const data = [
     {
       key: t('latestBlock'),

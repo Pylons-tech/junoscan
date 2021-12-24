@@ -6,6 +6,8 @@ import {
   useOnlineVotingPowerListenerSubscription,
   OnlineVotingPowerListenerSubscription,
   TotalVotingPowerListenerSubscription,
+  useOnlineVotingPowerQuerySubscription,
+  useTotalVotingPowerQuerySubscription,
   useStakingParamsQuery,
 } from '@graphql/types';
 import { StakingParams } from '@models';
@@ -45,9 +47,9 @@ export const useOnlineVotingPower = () => {
   // block voting power
   // ====================================
 
-  useOnlineVotingPowerListenerSubscription({
-    onSubscriptionData: (data) => {
-      const currentVotingPower = formatOnlineVotingPower(data.subscriptionData.data);
+  useOnlineVotingPowerQuerySubscription({
+    onCompleted: (data) => { 
+      const currentVotingPower = formatOnlineVotingPower(data);
 
       handleSetState({
         ...currentVotingPower,
@@ -68,10 +70,10 @@ export const useOnlineVotingPower = () => {
   // ====================================
   // total voting power
   // ====================================
-  useTotalVotingPowerListenerSubscription({
-    onSubscriptionData: (data) => {
+  useTotalVotingPowerQuerySubscription({
+    onCompleted: (data) => {
       handleSetState({
-        totalVotingPower: formatTotalVotingPower(data.subscriptionData.data),
+        totalVotingPower: formatTotalVotingPower(data),
       });
     },
   });

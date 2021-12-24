@@ -6,6 +6,12 @@ import { lightThemeOverride } from './light';
 import { deuteranopiaThemeOverride } from './deuteranopia';
 import { tritanopiaThemeOverride } from './tritanopia';
 import { junoThemeOverride } from './juno';
+import { royalThemeOverride } from './royal';
+import { electricblueThemeOverride } from './electricblue';
+import { pineThemeOverride } from './pine';
+import { revolutionThemeOverride } from './revolution';
+import { yellowThemeOverride } from './yellow';
+import { taupeThemeOverride } from './taupe'; 
 
 /** Common themes that don't change across light and dark theme */
 export const common = {
@@ -195,6 +201,12 @@ export const darkTemplate:ThemeOptions = R.mergeDeepLeft(darkThemeOverride, comm
 export const deuteranopiaTemplate:ThemeOptions = R.mergeDeepLeft(deuteranopiaThemeOverride, common);
 export const tritanopiaTemplate:ThemeOptions = R.mergeDeepLeft(tritanopiaThemeOverride, common);
 export const junoTemplate:ThemeOptions = R.mergeDeepLeft(junoThemeOverride, common);
+export const royalTemplate:ThemeOptions = R.mergeDeepLeft(royalThemeOverride, common);
+export const electricblueTemplate:ThemeOptions = R.mergeDeepLeft(electricblueThemeOverride, common);
+export const pineTemplate:ThemeOptions = R.mergeDeepLeft(pineThemeOverride, common);
+export const revolutionTemplate:ThemeOptions = R.mergeDeepLeft(revolutionThemeOverride, common);
+export const yellowTemplate:ThemeOptions = R.mergeDeepLeft(yellowThemeOverride, common);
+export const taupeTemplate:ThemeOptions = R.mergeDeepLeft(taupeThemeOverride, common); 
 
 // export const lightTheme = createMuiTheme(lightTemplate);
 // export const darkTheme = createMuiTheme(darkTemplate);

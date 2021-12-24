@@ -9,6 +9,12 @@ import {
   deuteranopiaTemplate,
   tritanopiaTemplate,
   junoTemplate,
+  royalTemplate,
+  electricblueTemplate,
+  pineTemplate,
+  revolutionTemplate,
+  yellowTemplate,
+  taupeTemplate,
 } from '@styles';
 import { usePersistedState } from '@hooks';
 import {
@@ -26,11 +32,13 @@ export const useTheme = (initialState:ThemeState) => {
   const [themeSelection, setThemeSelection] = usePersistedState('themeSelection', initialState.themeSelection);
 
   const themeList = [
-    // 'light',
     'dark',
-    // 'deuteranopia',
-    // 'tritanopia',
-    // 'juno',
+    'royal',
+    'electricblue',
+    'pine',
+    'revolution',
+    'yellow',
+    'taupe',
   ];
 
   const themeDictionary = {
@@ -39,6 +47,12 @@ export const useTheme = (initialState:ThemeState) => {
     deuteranopia: deuteranopiaTemplate,
     tritanopia: tritanopiaTemplate,
     juno: junoTemplate,
+    royal: royalTemplate,
+    electricblue: electricblueTemplate,
+    pine: pineTemplate,
+    revolution: revolutionTemplate,
+    yellow: yellowTemplate,
+    taupe: taupeTemplate,
   };
 
   useEffect(() => {

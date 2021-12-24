@@ -28,11 +28,12 @@ export const useStyles = () => {
           // width: '225px',
         },
         pylonIcon: {
-          width: '195px',
+          width: '192px',
           height: '70px',
           '&:hover': {
             cursor: 'pointer',
           },
+          borderRadius: '5px',
         },
         content: {
           width: '100%',

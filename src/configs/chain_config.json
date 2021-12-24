@@ -15,7 +15,7 @@
     "time": "2021-10-01T15:00:00Z",
     "height": 1
   },
-  "primaryTokenUnit": "ujuno",
+  "primaryTokenUnit": "upylon",
   "tokenUnits": {
     "ujuno": {
       "display": "juno",

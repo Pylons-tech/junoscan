@@ -15,7 +15,7 @@ export const useSearchBar = (t) => {
   const handleOnSubmit = (value: string, clear?: () => void) => {
     const consensusRegex = `^(${chainConfig.prefix.consensus})`;
     const validatorRegex = `^(${chainConfig.prefix.validator})`;
-    const userRegex = `^(${chainConfig.prefix.account})`; 
+    const userRegex = `^(${chainConfig.prefix.account})`;
     // consensus
     if (new RegExp(consensusRegex).test(value)) {
       const validatorAddress = findOperator(value);

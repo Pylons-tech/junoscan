@@ -13,6 +13,7 @@ import {
   TallyParamsQuery,
   useProposalValidatorSnapshotQuery,
   ProposalValidatorSnapshotQuery,
+  useProposalVotesQuerySubscription,
 } from '@graphql/types';
 import { getDenom } from '@utils/get_denom';
 import { formatDenom } from '@utils/format_denom';
@@ -95,13 +96,13 @@ export const useProposalDetails = () => {
     },
   });
 
-  useProposalVotesListenerSubscription({
+  useProposalVotesQuerySubscription({
     variables: {
       proposalId: R.pathOr('', ['query', 'id'], router),
     },
-    onSubscriptionData: (data) => {
+    onCompleted: (data) => {
       handleSetState({
-        votes: formatProposalVotes(data.subscriptionData.data),
+        votes: formatProposalVotes(data),
       });
     },
   });

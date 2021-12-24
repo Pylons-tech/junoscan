@@ -8,6 +8,7 @@ import {
   TokenPriceListenerSubscription,
   useActiveValidatorCountQuery,
   ActiveValidatorCountQuery,
+  useLatestBlockHeightCustomSubscription
 } from '@graphql/types';
 import { chainConfig } from '@configs';
 
@@ -34,11 +35,11 @@ export const useDataBlocks = () => {
   // block height
   // ====================================
 
-  useLatestBlockHeightListenerSubscription({
-    onSubscriptionData: (data) => {
+  useLatestBlockHeightCustomSubscription({
+    onCompleted: (data) => {
       setState((prevState) => ({
         ...prevState,
-        blockHeight: R.pathOr(0, ['height', 0, 'height'], data.subscriptionData.data),
+        blockHeight: R.pathOr(0, ['height', 0, 'height'], data),
       }));
     },
   });
